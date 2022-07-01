@@ -1,3 +1,51 @@
+/*
+
+Given a 2D screen arr[][] where each arr[i][j] is an integer representing the color of that pixel, 
+also given the location of a pixel (X, Y) and a color C, 
+the task is to replace the color of the given pixel and all the adjacent same-colored pixels with the given color.
+
+Example: 
+ 
+Input: arr[][] = { 
+{1, 1, 1, 1, 1, 1, 1, 1}, 
+{1, 1, 1, 1, 1, 1, 0, 0}, 
+{1, 0, 0, 1, 1, 0, 1, 1}, 
+{1, 2, 2, 2, 2, 0, 1, 0}, 
+{1, 1, 1, 2, 2, 0, 1, 0}, 
+{1, 1, 1, 2, 2, 2, 2, 0}, 
+{1, 1, 1, 1, 1, 2, 1, 1}, 
+{1, 1, 1, 1, 1, 2, 2, 1}} 
+Given: X = 4, Y = 4, C = 3 
+
+
+
+queue (4,3), (4,5), (5,4)
+
+
+Output: 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 0 0 
+1 0 0 1 1 0 1 1 
+1 3 3 3 3 0 1 0 
+1 1 1 3 3 0 1 0 
+1 1 1 3 3 3 3 0 
+1 1 1 1 1 3 1 1 
+1 1 1 1 1 3 3 1 
+
+Given: X = 3 Y = 1, C = 5 
+
+5 5 5 5 5 5 5 5
+5 5 5 5 5 5 0 0 
+5 0 0 5 5 0 1 1 
+5 2 2 2 2 0 1 0 
+5 5 5 2 2 0 1 0 
+5 5 5 2 2 2 2 0 
+5 5 5 5 5 2 1 1 
+5 5 5 5 5 2 2 1
+
+
+*/
+
 package com.test;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -102,50 +150,4 @@ public class ReplaceAdjacentElements {
 		
 	}
 }
-/*
 
-Given a 2D screen arr[][] where each arr[i][j] is an integer representing the color of that pixel, 
-also given the location of a pixel (X, Y) and a color C, 
-the task is to replace the color of the given pixel and all the adjacent same-colored pixels with the given color.
-
-Example: 
- 
-Input: arr[][] = { 
-{1, 1, 1, 1, 1, 1, 1, 1}, 
-{1, 1, 1, 1, 1, 1, 0, 0}, 
-{1, 0, 0, 1, 1, 0, 1, 1}, 
-{1, 2, 2, 2, 2, 0, 1, 0}, 
-{1, 1, 1, 2, 2, 0, 1, 0}, 
-{1, 1, 1, 2, 2, 2, 2, 0}, 
-{1, 1, 1, 1, 1, 2, 1, 1}, 
-{1, 1, 1, 1, 1, 2, 2, 1}} 
-Given: X = 4, Y = 4, C = 3 
-
-
-
-queue (4,3), (4,5), (5,4)
-
-
-Output: 
-1 1 1 1 1 1 1 1 
-1 1 1 1 1 1 0 0 
-1 0 0 1 1 0 1 1 
-1 3 3 3 3 0 1 0 
-1 1 1 3 3 0 1 0 
-1 1 1 3 3 3 3 0 
-1 1 1 1 1 3 1 1 
-1 1 1 1 1 3 3 1 
-
-Given: X = 3 Y = 1, C = 5 
-
-5 5 5 5 5 5 5 5
-5 5 5 5 5 5 0 0 
-5 0 0 5 5 0 1 1 
-5 2 2 2 2 0 1 0 
-5 5 5 2 2 0 1 0 
-5 5 5 2 2 2 2 0 
-5 5 5 5 5 2 1 1 
-5 5 5 5 5 2 2 1
-
-
-*/
